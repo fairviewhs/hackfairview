@@ -12,10 +12,17 @@ body {
 }
 
 div#landing {
+  height: 100%;
+  width: 100%;
+}
+
+div#background-parallax {
   background-image: url("bg.jpg");
   background-size: cover;
   background-position-x: 50%;
   background-position-y: 0;
+  position: fixed;
+  z-index: -1;
   height: 100%;
   width: 100%;
 }
