@@ -17,6 +17,17 @@
     <div id="landing">
       <div id="background-parallax">
       </div>
+      <div id="background-overlay">
+      </div>
+      <script>
+      $(document).ready(function() {
+        $(window).scroll(function() {
+          var height = window.innerHeight;
+          var scroll = $(window).scrollTop();
+          $("#background-overlay").css("opacity", (3*(scroll/height) + 0.25))
+        });
+      });
+      </script>
       <div id="maintitle">
         <div class="textarea">
           <div class="titletext">HackFairview</div>
