@@ -6,20 +6,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="script.js"></script>
 
     <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div id="landing">
+      <div id="background-parallax">
+      </div>
+      <div id="background-overlay">
+      </div>
+      <script>
+      $(document).ready(function() {
+        $(window).scroll(function() {
+          var height = window.innerHeight;
+          var scroll = $(window).scrollTop();
+          $("#background-overlay").css("opacity", (3*(scroll/height) + 0.25))
+        });
+      });
+      </script>
       <div id="maintitle">
         <div class="textarea">
           <div class="titletext">HackFairview</div>
           <div class="subtext">Fairview High School, Boulder, Colorado</div>
           <div class="subtext">April 16 - 17, 2016</div>
         </div>
-        <a href="google.com">Apply</a>
-        <a href="google.com">Sponsor</a>
+        <a class="top-button" href="google.com">Apply</a>
+        <a class="top-button" href="google.com">Sponsor</a>
       </div>
       <a href="https://mlh.io/seasons/s2016/events?utm_source=s2016&utm_medium=TrustBadge&utm_campaign=s2016" target="_blank"><img src="mlh-banner.png" /></a>
     </div>
